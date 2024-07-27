@@ -1,4 +1,14 @@
 .experience {
+  padding: 0 0 69px;
+
+  @include vp640 {
+    padding: 0 0 101px;
+  }
+
+  @include vp960 {
+    padding: 0;
+  }
+
   &__container {
     display: grid;
     gap: 8px;
@@ -18,7 +28,7 @@
 
     @include vp1280 {
       gap: 42px;
-      padding: 92px 25px 58px;
+      padding: 92px 25px 0;
       border-right: 3px solid $color-linen;
     }
   }
@@ -165,6 +175,7 @@
 
     @include vp960 {
       width: calc(100% - 38px);
+      height: calc(100% - 151px);
       top: 27px;
       right: -40px;
       padding: 0 0 152px;
@@ -174,16 +185,7 @@
       width: calc(100% - 33px);
       top: 37px;
       right: -35px;
-    }
-
-    &--size {
-      @include vp960 {
-        height: calc(100% - 151px);
-      }
-
-      @include vp1280 {
-        height: calc(100% - 133px);
-      }
+      height: 502px;
     }
   }
 
@@ -213,7 +215,7 @@
     @include vp960 {
       width: 51px;
       height: 33px;
-      margin: -5px 0 0 -5px;
+      margin: -1px 0 0 -5px;
     }
 
     @include vp1280 {

@@ -1,10 +1,11 @@
 const video = document.querySelector('.experience__video');
+const img = video.querySelector('.experience__img');
 let iframe;
 
 const createIframe = () => {
   iframe = document.createElement('iframe');
   iframe.style.width = '100%';
-  iframe.style.height = `${video.offsetHeight}px`;
+  iframe.style.height = `${img.offsetHeight}px`;
   iframe.setAttribute('loading', 'lazy');
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('frameborder', '0');
@@ -17,7 +18,7 @@ const replacePicture = () => {
   createIframe();
   video.innerHTML = '';
   video.appendChild(iframe);
-  video.classList.remove('experience__video--size');
+  // video.classList.remove('experience__video--size');
 };
 
 video.addEventListener('click', (evt) => {

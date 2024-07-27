@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "mixins";
+@import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 
@@ -12,3 +13,4 @@
 @import "blocks/btn";
 @import "blocks/hero";
 @import "blocks/experience";
+@import "blocks/mission";
