@@ -165,16 +165,25 @@
 
     @include vp960 {
       width: calc(100% - 38px);
-      height: calc(100% - 151px);
       top: 27px;
       right: -40px;
+      padding: 0 0 152px;
     }
 
     @include vp1280 {
       width: calc(100% - 33px);
-      height: calc(100% - 133px);
       top: 37px;
       right: -35px;
+    }
+
+    &--size {
+      @include vp960 {
+        height: calc(100% - 151px);
+      }
+
+      @include vp1280 {
+        height: calc(100% - 133px);
+      }
     }
   }
 

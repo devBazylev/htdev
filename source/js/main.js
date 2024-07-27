@@ -1,6 +1,1 @@
-// window.addEventListener('DOMContentLoaded', () => {
-
-//   window.addEventListener('load', () => {
-
-//   });
-// });
+import './modules/experience.js';
