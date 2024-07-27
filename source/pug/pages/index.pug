@@ -1,0 +1,15 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Test"
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+
+block main
+  main
+    +hero()
+    +experience()
