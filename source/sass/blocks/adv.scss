@@ -1,0 +1,150 @@
+.adv {
+  overflow-x: hidden;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 15px calc(100vw - 60px) 15px;
+    margin: 0 auto;
+    padding: 50px 0 20px;
+    background-color: $color-linen;
+    overflow-x: hidden;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 260px;
+    height: 284px;
+    overflow: hidden;
+  }
+
+  &__title {
+    grid-area: 1/2/2/3;
+    width: fit-content;
+    margin: 0 0 10px;
+    color: $color-accent-main;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  &__wrapper {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__subwrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 32px;
+    background-color: $color-accent-main;
+    overflow: hidden;
+  }
+
+  &__picture {
+    z-index: 1;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  &__picture.is-active {
+    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    overflow: unset;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $color-default-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    @include vp960 {
+      font-size: 18px;
+    }
+  }
+
+  &__subtitle.is-active {
+    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    overflow: unset;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-default-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    max-height: 0;
+    overflow: hidden;
+
+    @include vp960 {
+      font-size: 18px;
+    }
+  }
+
+  &__text.is-active {
+    max-height: 100vh;
+    overflow: auto;
+  }
+
+  &__plus {
+    position: absolute;
+    top: 61px;
+    right: 7px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    &::before,
+    &::after {
+      @include pseudo {
+        position: relative;
+        width: 16px;
+        height: 2px;
+        background-color: $color-default-white;
+      }
+    }
+
+    &::before {
+      top: 14px;
+      left: 7px;
+    }
+
+    &::after {
+      top: 14px;
+      left: -8px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__btn {
+    z-index: 1;
+    width: 15px;
+    height: auto;
+    padding: 0;
+    background-color: $color-linen;
+  }
+
+  &__btn--prev {
+    grid-area: 1/1/3/2;
+  }
+
+  &__btn--next {
+    grid-area: 1/3/3/4;
+  }
+}

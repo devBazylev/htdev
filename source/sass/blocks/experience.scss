@@ -162,6 +162,10 @@
 
     @include hover-focus {
       opacity: 0.9;
+
+      .experience__btn {
+        opacity: 1;
+      }
     }
 
     & > * {
