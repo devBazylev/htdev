@@ -1,0 +1,100 @@
+mixin ferment()
+  -
+    const mock = [
+      {
+        subtitle: "10 700+ сотрудников",
+        picture: true,
+        path: "content",
+        name: "ferment1",
+        format: "jpg",
+        width_mob: "260",
+        height_mob: "240",
+        width_tab: "454",
+        height_tab: "240",
+        width_desk: "565",
+        height_desk: "240",
+        alt: "Сотрудники обсуждают стратегию за столом.",
+      },
+      {
+        subtitle: "570 экспертов R&D",
+        picture: true,
+        path: "content",
+        name: "ferment2",
+        format: "jpg",
+        width_mob: "260",
+        height_mob: "240",
+        width_tab: "294",
+        height_tab: "240",
+        width_desk: "294",
+        height_desk: "240",
+        alt: "Девушка проводит химический опыт.",
+        short : true,
+      },
+      {
+        subtitle: "лет опыта на\u00A0рынке\u00A0хлебопечения",
+        svg: "167-twink",
+        width_svg: "162",
+        height_svg: "73",
+        short : true,
+      },
+      {
+        subtitle: "25+ лет в Росии",
+        picture: true,
+        path: "content",
+        name: "ferment4",
+        format: "jpg",
+        width_mob: "260",
+        height_mob: "240",
+        width_tab: "454",
+        height_tab: "240",
+        width_desk: "565",
+        height_desk: "240",
+        alt: "Поле пшеницы на закате.",
+      },
+      {
+        subtitle: "Филиалы в 50 странах",
+        picture: true,
+        path: "content",
+        name: "ferment5",
+        format: "jpg",
+        width_mob: "260",
+        height_mob: "240",
+        width_tab: "454",
+        height_tab: "240",
+        width_desk: "565",
+        height_desk: "240",
+        alt: "Завод возле чистой реки.",
+      },
+      {
+        subtitle: "направления деятельности",
+        svg: "4",
+        width_svg: "59",
+        height_svg: "77",
+        short : true,
+      },
+    ]
+
+  section.ferment
+    .ferment__container.swiper
+      h2.ferment__title DuffBeer
+      p.ferment__text Ключевой мировой игрок в&nbsp;области ферментации
+      .ferment__wrapper.swiper-wrapper
+        each data in mock
+          if (data.short)
+            .ferment__slide.ferment__slide--short.swiper-slide
+              if (data.picture)
+                .ferment__picture
+                  +picture-extended(data.path, data.name, data.format, data.width_mob, data.height_mob, data.width_tab, data.height_tab, data.width_desk, data.height_desk, data.alt)
+                h3.ferment__subtitle= `${data.subtitle}`
+              else
+                +icon(data.svg, data.width_svg, data.height_svg)(aria-label= `${data.svg}`).ferment__svg
+                h3.ferment__subtitle= `${data.subtitle}`
+          else
+            .ferment__slide.swiper-slide
+              if (data.picture)
+                .ferment__picture
+                  +picture-extended(data.path, data.name, data.format, data.width_mob, data.height_mob, data.width_tab, data.height_tab, data.width_desk, data.height_desk, data.alt)
+                h3.ferment__subtitle= `${data.subtitle}`
+      +btn(aria-label="Переключите на предыдущий слайд").ferment__btn.ferment__btn--prev
+      +btn(aria-label="Переключите на следующий слайд").ferment__btn.ferment__btn--next
+      .ferment__pagination
