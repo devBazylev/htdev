@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 352px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $color-accent-second-trans-67;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image:
+    image-set(
+      url("../../img/content/hero-320@2x.webp") type("image/webp") 2x,
+      url("../../img/content/hero-320.webp") type("image/webp") 1x,
+      url("../../img/content/hero-320@2x.jpg") type("image/jpg") 2x,
+      url("../../img/content/hero-320.jpg") type("image/jpg") 1x
+    );
+
+  @include vp640 {
+    min-height: 314px;
+    background-image:
+      image-set(
+        url("../../img/content/hero-640@2x.webp") type("image/webp") 2x,
+        url("../../img/content/hero-640.webp") type("image/webp") 1x,
+        url("../../img/content/hero-640@2x.jpg") type("image/jpg") 2x,
+        url("../../img/content/hero-640.jpg") type("image/jpg") 1x
+      );
+  }
+
+  @include vp960 {
+    min-height: 599px;
+    background-image:
+      image-set(
+        url("../../img/content/hero-960@2x.webp") type("image/webp") 2x,
+        url("../../img/content/hero-960.webp") type("image/webp") 1x,
+        url("../../img/content/hero-960@2x.jpg") type("image/jpg") 2x,
+        url("../../img/content/hero-960.jpg") type("image/jpg") 1x
+      );
+  }
+
+  @include vp1280 {
+    background-image:
+      image-set(
+        url("../../img/content/hero-1280@2x.webp") type("image/webp") 2x,
+        url("../../img/content/hero-1280.webp") type("image/webp") 1x,
+        url("../../img/content/hero-1280@2x.jpg") type("image/jpg") 2x,
+        url("../../img/content/hero-1280.jpg") type("image/jpg") 1x
+      );
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: fit-content;
+    margin: 0 auto 54px;
+
+    @include vp960 {
+      width: 267px;
+      height: 103px;
+      margin: 0 0 135px 60px;
+    }
+
+    @include vp1280 {
+      margin: 0 0 117px 60px;
+    }
+  }
+
+  &__logo {
+    @include vp960 {
+      width: 267px;
+      height: 103px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    color: $color-default-white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include vp640 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include vp960 {
+      margin: 0 0 28px 40px;
+      font-size: 72px;
+      line-height: 80px;
+      text-align: left;
+    }
+
+    @include vp1280 {
+      margin: 0 0 14px 60px;
+    }
+  }
+
+  &__text {
+    width: 227px;
+    height: 25px;
+    margin: 0 auto;
+    color: $color-default-white;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include vp640 {
+      width: 322px;
+      height: 40px;
+    }
+
+    @include vp960 {
+      width: 550px;
+      height: 72px;
+      margin: 0 0 0 40px;
+      font-size: 26px;
+      line-height: 36px;
+      text-align: left;
+    }
+
+    @include vp1280 {
+      margin: 0 0 0 60px;
+    }
+  }
+
+  &::after {
+    @include vp1280 {
+      @include pseudo;
+      @include svg("decor-hero");
+
+      position: absolute;
+      bottom: -97px;
+      right: -130px;
+      width: 493px;
+      height: 368px;
+    }
+  }
+}

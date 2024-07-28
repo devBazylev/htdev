@@ -1,0 +1,8 @@
+mixin picture-extended(path, image, format, widthMob, heightMob, widthTab, heightTab, widthDesk, heightDesk, altText)
+  picture(class!=attributes.class)
+    source(type="image/webp", media="(min-width: 1280px)", srcset="img/" + path + "/" + image + "-1280.webp" + ", " + "img/" + path + "/" + image + "-1280@2x.webp" + " 2x", width= widthDesk, height= heightDesk)
+    source(type="image/webp", media="(min-width: 960px)", srcset="img/" + path + "/" + image + "-960.webp" + ", " + "img/" + path + "/" + image + "-960@2x.webp" + " 2x", width= widthTab, height= heightTab)
+    source(type="image/webp", srcset="img/" + path + "/" + image + "-320.webp" + ", " + "img/" + path + "/" + image + "-320@2x.webp" + " 2x", width= widthMob, height= heightMob)
+    source(type="image/webp", media="(min-width: 1280px)", srcset="img/" + path + "/" + image + "-1280." + format + ", " + "img/" + path + "/" + image + "-1280@2x." + format + " 2x", width= widthDesk, height= heightDesk)
+    source(type="image/webp", media="(min-width: 960px)", srcset="img/" + path + "/" + image + "-960." + format + ", " + "img/" + path + "/" + image + "-960@2x." + format + " 2x", width= widthTab, height= heightTab)
+    img(src="img/" + path + "/" + image + "-320." + format, srcset= "img/" + path + "/" + image + "-320@2x." + format + " 2x", width= widthMob, height= heightMob, alt= altText, loading="lazy")&attributes(attributes)

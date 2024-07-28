@@ -1,0 +1,238 @@
+.experience {
+  padding: 0 0 69px;
+
+  @include vp640 {
+    padding: 0 0 101px;
+  }
+
+  @include vp960 {
+    padding: 0;
+  }
+
+  &__container {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include vp640 {
+      gap: 10px;
+    }
+
+    @include vp960 {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 71px 15px 58px 0;
+    }
+
+    @include vp1280 {
+      gap: 42px;
+      padding: 92px 25px 0;
+      border-right: 3px solid $color-linen;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    width: 100%;
+    padding: 0 30px 0 0;
+
+    @include vp640 {
+      padding: 0 49px 0 20px;
+    }
+
+    @include vp960 {
+      padding: 42px 0 0;
+    }
+
+    @include vp1280 {
+      padding: 8px 0 0;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 17px 20px 14px;
+
+    @include vp640 {
+      padding: 59px 20px 20px;
+    }
+
+    @include vp960 {
+      order: 1;
+      gap: 16px;
+      padding: 0 10px 0 0;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include vp1280 {
+      padding: 0 33px 0 0;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 18px;
+
+    @include vp640 {
+      gap: 13px;
+      margin: 0 0 10px;
+    }
+
+    @include vp960 {
+      width: 190px;
+      height: 131px;
+    }
+
+    @include vp1280 {
+      gap: 12px;
+    }
+  }
+
+  &__numbers {
+    width: 71px;
+    height: 32px;
+
+    @include vp960 {
+      width: 148px;
+      height: 84px;
+    }
+  }
+
+  &__letters {
+    @include vp960 {
+      width: 187px;
+      height: 27px;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: $color-soya-bean;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include vp960 {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__back {
+    grid-area: 1/1/2/2;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+    background-color: $color-linen;
+
+    @include vp640 {
+      width: calc(100% - 21px);
+      height: calc(100% + 20px);
+    }
+
+    @include vp960 {
+      width: calc(100% - 40px);
+      height: 272px;
+    }
+
+    @include vp1280 {
+      width: calc(100% - 33px);
+      height: 367px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    top: 20px;
+    right: -14px;
+    z-index: 1;
+    display: grid;
+    grid-area: 1/1/2/2;
+    width: 100%;
+    cursor: pointer;
+
+    @include hover-focus {
+      opacity: 0.9;
+
+      .experience__btn {
+        opacity: 1;
+      }
+    }
+
+    & > * {
+      grid-area: 1/1/2/2;
+    }
+
+    @include vp640 {
+      top: 41px;
+      right: -29px;
+    }
+
+    @include vp960 {
+      width: calc(100% - 38px);
+      height: calc(100% - 151px);
+      top: 27px;
+      right: -40px;
+      padding: 0 0 152px;
+    }
+
+    @include vp1280 {
+      width: calc(100% - 33px);
+      top: 37px;
+      right: -35px;
+      height: 502px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 24px;
+    padding: 0;
+    background-color: $color-transparent;
+    z-index: 1;
+    margin: 0 0 0 -3px;
+
+    @include vp640 {
+      width: 69px;
+      height: 46px;
+      margin: 0 0 0 -8px;
+    }
+
+    @include vp960 {
+      width: 51px;
+      height: 33px;
+      margin: -1px 0 0 -5px;
+    }
+
+    @include vp1280 {
+      width: 69px;
+      height: 51px;
+      margin: 0 0 0 -7px;
+    }
+  }
+
+  &__play {
+    @include vp640 {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

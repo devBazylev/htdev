@@ -1,0 +1,276 @@
+.mission {
+  width: 100%;
+  min-height: 352px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $color-accent-second-trans-42;
+
+  @include vp960 {
+    padding: 18px 0 0;
+  }
+
+  @include vp1280 {
+    padding: 0;
+  }
+
+  &__conatiner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    min-height: 144px;
+    padding: 33px 20px 31px 14px;
+    background-color: $color-accent-main;
+    overflow: hidden;
+
+    @include vp640 {
+      min-height: 100px;
+      padding: 34px 109px 30px 20px;
+    }
+
+    @include vp960 {
+      min-height: 252px;
+      padding: 95px 109px 30px 40px;
+    }
+
+    @include vp1280 {
+      padding: 95px 430px 30px 60px;
+    }
+
+    &::after {
+      @include pseudo;
+      @include svg("decor-mission");
+
+      position: absolute;
+      bottom: -50px;
+      right: -53px;
+      width: 177px;
+      height: 135px;
+
+      @include vp640 {
+        bottom: -17px;
+        right: 0;
+        width: 177px;
+        height: 132px;
+      }
+
+      @include vp960 {
+        bottom: -103px;
+        right: -283px;
+        width: 434px;
+        height: 322px;
+      }
+
+      @include vp1280 {
+        bottom: -108px;
+        right: -1px;
+        width: 432px;
+        height: 325px;
+      }
+    }
+  }
+
+  &__intro {
+    position: relative;
+    display: flex;
+    gap: 7px;
+    margin: 0;
+    color: $color-default-white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    z-index: 1;
+
+    @include vp640 {
+      gap: 27px;
+    }
+
+    @include vp960 {
+      gap: 39px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &::before {
+      @include pseudo {
+        @include svg("double-arrows");
+
+        width: 22px;
+        height: 28px;
+        flex-shrink: 0;
+
+        @include vp640 {
+          position: relative;
+          top: 4px;
+        }
+
+        @include vp960 {
+          top: 1px;
+          width: 47px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    min-height: 275px;
+    padding: 28px 0 0;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image:
+      image-set(
+        url("../../img/content/mission-320@2x.webp") type("image/webp") 2x,
+        url("../../img/content/mission-320.webp") type("image/webp") 1x,
+        url("../../img/content/mission-320@2x.jpg") type("image/jpg") 2x,
+        url("../../img/content/hero-320.jpg") type("image/jpg") 1x
+      );
+
+    @include vp640 {
+      padding: 56px 0 0;
+      background-image:
+        image-set(
+          url("../../img/content/mission-640@2x.webp") type("image/webp") 2x,
+          url("../../img/content/mission-640.webp") type("image/webp") 1x,
+          url("../../img/content/mission-640@2x.jpg") type("image/jpg") 2x,
+          url("../../img/content/mission-640.jpg") type("image/jpg") 1x
+        );
+    }
+
+    @include vp960 {
+      min-height: 461px;
+      padding: 85px 0 0;
+      background-image:
+        image-set(
+          url("../../img/content/mission-960@2x.webp") type("image/webp") 2x,
+          url("../../img/content/mission-960.webp") type("image/webp") 1x,
+          url("../../img/content/mission-960@2x.jpg") type("image/jpg") 2x,
+          url("../../img/content/mission-960.jpg") type("image/jpg") 1x
+        );
+    }
+
+    @include vp1280 {
+      min-height: 437px;
+      padding: 81px 0 0;
+      background-image:
+        image-set(
+          url("../../img/content/mission-1280@2x.webp") type("image/webp") 2x,
+          url("../../img/content/mission-1280.webp") type("image/webp") 1x,
+          url("../../img/content/mission-1280@2x.jpg") type("image/jpg") 2x,
+          url("../../img/content/mission-1280.jpg") type("image/jpg") 1x
+        );
+    }
+  }
+
+  &__title {
+    display: flex;
+    gap: 16px;
+    width: fit-content;
+    margin: 0 auto 4px;
+    font-family: $ff-secondary;
+    color: $color-default-white;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    text-transform: uppercase;
+
+    @include vp640 {
+      gap: 13px;
+      margin: 0 auto 21px;
+      font-size: 30px;
+      line-height: 46px;
+    }
+
+    @include vp960 {
+      gap: 21px;
+      margin: 0 auto 31px;
+      font-size: 48px;
+      line-height: 80px;
+    }
+
+    @include vp1280 {
+      margin: 0 auto 37px;
+    }
+
+    &::before,
+    &::after {
+      @include pseudo {
+        position: relative;
+        top: 21px;
+        width: 15px;
+        height: 1px;
+        background-color: $color-default-white;
+
+        @include vp960 {
+          top: 37px;
+          width: 66px;
+          height: 4px;
+        }
+      }
+    }
+  }
+
+  &__gist {
+    margin: 0 auto 29px;
+    padding: 0 10px;
+    color: $color-default-white;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include vp640 {
+      margin: 0 auto 9px;
+      padding: 0 100px;
+    }
+
+    @include vp960 {
+      margin: 0 auto 32px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include vp1280 {
+      margin: 0 auto 38px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    width: 197px;
+    margin: 0 auto;
+    padding: 10px 20px 10px 29px;
+    align-items: flex-start;
+    gap: 10px;
+    color: $color-accent-main;
+    background: $color-default-white;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+
+    @include vp640 {
+      width: 171px;
+      padding: 10px 24px 10px 32px;
+      font-size: 14px;
+    }
+
+    @include vp960 {
+      width: 283px;
+      padding: 20px 40px 20px 73px;
+      font-size: 18px;
+    }
+  }
+}
