@@ -1,8 +1,9 @@
 .ferment {
+  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &__container {
     display: grid;
@@ -81,6 +82,8 @@
   }
 
   &__wrapper {
+    position: relative;
+    z-index: 1;
     grid-area: 4/2/5/3;
     display: flex;
     flex-wrap: nowrap;
@@ -141,7 +144,7 @@
 
       @include vp1280 {
         h3 {
-          padding: 16px 40px 0 50px;
+          padding: 16px 41px 16px 50px;
         }
       }
     }
@@ -198,7 +201,7 @@
 
       @include vp1280 {
         h3 {
-          padding: 16px 32px 0 40px;
+          padding: 16px 32px 16px 40px;
         }
       }
     }
@@ -339,6 +342,58 @@
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &::after {
+    @include pseudo;
+    @include svg("decor-ferment-main");
+
+    position: absolute;
+    bottom: -201px;
+    right: -105px;
+    width: 237px;
+    height: 297px;
+
+    @include vp640 {
+      bottom: -216px;
+      right: -69px;
+      width: 237px;
+      height: 297px;
+    }
+
+    @include vp960 {
+      bottom: 751px;
+      right: -126px;
+      width: 332px;
+      height: 418px;
+    }
+
+    @include vp1280 {
+      bottom: 755px;
+      right: -36px;
+      width: 332px;
+      height: 418px;
+    }
+  }
+
+  &::before {
+    @include vp960 {
+      @include pseudo;
+      @include svg("decor-ferment-secondary");
+
+      position: absolute;
+      bottom: 179px;
+      left: -117px;
+      width: 489px;
+      height: 376px;
+    }
+
+    @include vp1280 {
+      bottom: 308px;
+      left: -99px;
+      width: 489px;
+      height: 367px;
     }
   }
 }

@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 352px;
   max-width: 1440px;
@@ -130,6 +132,19 @@
 
     @include vp1280 {
       margin: 0 0 0 60px;
+    }
+  }
+
+  &::after {
+    @include vp1280 {
+      @include pseudo;
+      @include svg("decor-hero");
+
+      position: absolute;
+      bottom: -97px;
+      right: -130px;
+      width: 493px;
+      height: 368px;
     }
   }
 }
