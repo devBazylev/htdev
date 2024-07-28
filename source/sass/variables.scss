@@ -7,11 +7,10 @@ $color-accent-second:               #8a7b60;
 $color-soya-bean:                   #6c5f4a;
 $color-linen:                       #f7eee5;
 
-// $color-stonewall:                   #8a7b60;
-
 $color-transparent:                 rgba(255, 255, 255, 0);
 $color-accent-second-trans-67:      rgba(138, 123, 96, 0.67);
 $color-accent-second-trans-42:      rgba(138, 123, 96, 0.42);
+$color-accent-second-trans-33:      rgba(138, 123, 96, 0.33);
 
 //Typography
 
@@ -22,7 +21,7 @@ $fz-default: 16px;
 
 // Animation
 
-$tf-default:                        ease-in-out;
+$tf-default:                        ease-in;
 
 $trans-default:                     0.3s $tf-default;
 $trans-600:                         0.6s $tf-default;
