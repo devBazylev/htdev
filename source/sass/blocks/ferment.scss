@@ -265,6 +265,7 @@
 
     &::before {
       @include svg("arrow");
+
       @include pseudo {
         position: relative;
         top: 16px;
@@ -291,7 +292,7 @@
       transform: rotate(180deg);
 
       @include vp640 {
-        margin: 38px 0 0 0px;
+        margin: 38px 0 0 0;
       }
     }
   }

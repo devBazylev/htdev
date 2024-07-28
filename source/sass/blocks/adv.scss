@@ -63,7 +63,7 @@
     @include vp960 {
       margin: 0 0 32px;
       font-size: 40px;
-      line-height: 60px
+      line-height: 60px;
     }
 
     @include vp1280 {
@@ -241,6 +241,7 @@
 
     &::before {
       @include svg("arrow");
+
       @include pseudo {
         position: relative;
         width: 14px;
