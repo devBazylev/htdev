@@ -127,20 +127,20 @@
     background-repeat: no-repeat;
     background-image:
       image-set(
-        url("../../img/content/mission-320@2x.webp") type("image/webp") 2x,
-        url("../../img/content/mission-320.webp") type("image/webp") 1x,
-        url("../../img/content/mission-320@2x.jpg") type("image/jpg") 2x,
-        url("../../img/content/hero-320.jpg") type("image/jpg") 1x
+        url("../img/content/mission-320@2x.webp") type("image/webp") 2x,
+        url("../img/content/mission-320.webp") type("image/webp") 1x,
+        url("../img/content/mission-320@2x.jpg") type("image/jpg") 2x,
+        url("../img/content/hero-320.jpg") type("image/jpg") 1x
       );
 
     @include vp640 {
       padding: 56px 0 0;
       background-image:
         image-set(
-          url("../../img/content/mission-640@2x.webp") type("image/webp") 2x,
-          url("../../img/content/mission-640.webp") type("image/webp") 1x,
-          url("../../img/content/mission-640@2x.jpg") type("image/jpg") 2x,
-          url("../../img/content/mission-640.jpg") type("image/jpg") 1x
+          url("../img/content/mission-640@2x.webp") type("image/webp") 2x,
+          url("../img/content/mission-640.webp") type("image/webp") 1x,
+          url("../img/content/mission-640@2x.jpg") type("image/jpg") 2x,
+          url("../img/content/mission-640.jpg") type("image/jpg") 1x
         );
     }
 
@@ -149,10 +149,10 @@
       padding: 85px 0 0;
       background-image:
         image-set(
-          url("../../img/content/mission-960@2x.webp") type("image/webp") 2x,
-          url("../../img/content/mission-960.webp") type("image/webp") 1x,
-          url("../../img/content/mission-960@2x.jpg") type("image/jpg") 2x,
-          url("../../img/content/mission-960.jpg") type("image/jpg") 1x
+          url("../img/content/mission-960@2x.webp") type("image/webp") 2x,
+          url("../img/content/mission-960.webp") type("image/webp") 1x,
+          url("../img/content/mission-960@2x.jpg") type("image/jpg") 2x,
+          url("../img/content/mission-960.jpg") type("image/jpg") 1x
         );
     }
 
@@ -161,10 +161,10 @@
       padding: 81px 0 0;
       background-image:
         image-set(
-          url("../../img/content/mission-1280@2x.webp") type("image/webp") 2x,
-          url("../../img/content/mission-1280.webp") type("image/webp") 1x,
-          url("../../img/content/mission-1280@2x.jpg") type("image/jpg") 2x,
-          url("../../img/content/mission-1280.jpg") type("image/jpg") 1x
+          url("../img/content/mission-1280@2x.webp") type("image/webp") 2x,
+          url("../img/content/mission-1280.webp") type("image/webp") 1x,
+          url("../img/content/mission-1280@2x.jpg") type("image/jpg") 2x,
+          url("../img/content/mission-1280.jpg") type("image/jpg") 1x
         );
     }
   }
