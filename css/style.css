@@ -634,8 +634,8 @@ button,
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("../../img/content/hero-320@2x.webp") type("image/webp") 2x, url("../../img/content/hero-320.webp") type("image/webp") 1x, url("../../img/content/hero-320@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-320.jpg") type("image/jpg") 1x);
-  background-image: image-set(url("../../img/content/hero-320@2x.webp") type("image/webp") 2x, url("../../img/content/hero-320.webp") type("image/webp") 1x, url("../../img/content/hero-320@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-320.jpg") type("image/jpg") 1x);
+  background-image: -webkit-image-set(url("../img/content/hero-320@2x.webp") type("image/webp") 2x, url("../img/content/hero-320.webp") type("image/webp") 1x, url("../img/content/hero-320@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-320.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/content/hero-320@2x.webp") type("image/webp") 2x, url("../img/content/hero-320.webp") type("image/webp") 1x, url("../img/content/hero-320@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-320.jpg") type("image/jpg") 1x);
 }
 
 .hero__container {
@@ -823,7 +823,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/sprite/decor-mission.svg");
+  background-image: url("../img/sprite/decor-mission.svg");
   position: absolute;
   bottom: -50px;
   right: -53px;
@@ -852,7 +852,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/sprite/double-arrows.svg");
+  background-image: url("../img/sprite/double-arrows.svg");
   width: 22px;
   height: 28px;
   -ms-flex-negative: 0;
@@ -866,8 +866,8 @@ button,
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("../../img/content/mission-320@2x.webp") type("image/webp") 2x, url("../../img/content/mission-320.webp") type("image/webp") 1x, url("../../img/content/mission-320@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-320.jpg") type("image/jpg") 1x);
-  background-image: image-set(url("../../img/content/mission-320@2x.webp") type("image/webp") 2x, url("../../img/content/mission-320.webp") type("image/webp") 1x, url("../../img/content/mission-320@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-320.jpg") type("image/jpg") 1x);
+  background-image: -webkit-image-set(url("../img/content/mission-320@2x.webp") type("image/webp") 2x, url("../img/content/mission-320.webp") type("image/webp") 1x, url("../img/content/mission-320@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-320.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("../img/content/mission-320@2x.webp") type("image/webp") 2x, url("../img/content/mission-320.webp") type("image/webp") 1x, url("../img/content/mission-320@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-320.jpg") type("image/jpg") 1x);
 }
 
 .mission__title {
@@ -1126,7 +1126,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/sprite/arrow.svg");
+  background-image: url("../img/sprite/arrow.svg");
   content: "";
   display: block;
   position: relative;
@@ -1344,7 +1344,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/sprite/arrow.svg");
+  background-image: url("../img/sprite/arrow.svg");
   content: "";
   display: block;
   position: relative;
@@ -1434,7 +1434,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/sprite/decor-ferment-main.svg");
+  background-image: url("../img/sprite/decor-ferment-main.svg");
   position: absolute;
   bottom: -201px;
   right: -105px;
@@ -1445,8 +1445,8 @@ button,
 @media (min-width: 640px) {
   .hero {
     min-height: 314px;
-    background-image: -webkit-image-set(url("../../img/content/hero-640@2x.webp") type("image/webp") 2x, url("../../img/content/hero-640.webp") type("image/webp") 1x, url("../../img/content/hero-640@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-640.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/hero-640@2x.webp") type("image/webp") 2x, url("../../img/content/hero-640.webp") type("image/webp") 1x, url("../../img/content/hero-640@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-640.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/hero-640@2x.webp") type("image/webp") 2x, url("../img/content/hero-640.webp") type("image/webp") 1x, url("../img/content/hero-640@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-640.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/hero-640@2x.webp") type("image/webp") 2x, url("../img/content/hero-640.webp") type("image/webp") 1x, url("../img/content/hero-640@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-640.jpg") type("image/jpg") 1x);
   }
 
   .hero__title {
@@ -1524,8 +1524,8 @@ button,
 
   .mission__content {
     padding: 56px 0 0;
-    background-image: -webkit-image-set(url("../../img/content/mission-640@2x.webp") type("image/webp") 2x, url("../../img/content/mission-640.webp") type("image/webp") 1x, url("../../img/content/mission-640@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-640.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/mission-640@2x.webp") type("image/webp") 2x, url("../../img/content/mission-640.webp") type("image/webp") 1x, url("../../img/content/mission-640@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-640.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/mission-640@2x.webp") type("image/webp") 2x, url("../img/content/mission-640.webp") type("image/webp") 1x, url("../img/content/mission-640@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-640.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/mission-640@2x.webp") type("image/webp") 2x, url("../img/content/mission-640.webp") type("image/webp") 1x, url("../img/content/mission-640@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-640.jpg") type("image/jpg") 1x);
   }
 
   .mission__title {
@@ -1625,8 +1625,8 @@ button,
 @media (min-width: 960px) {
   .hero {
     min-height: 599px;
-    background-image: -webkit-image-set(url("../../img/content/hero-960@2x.webp") type("image/webp") 2x, url("../../img/content/hero-960.webp") type("image/webp") 1x, url("../../img/content/hero-960@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-960.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/hero-960@2x.webp") type("image/webp") 2x, url("../../img/content/hero-960.webp") type("image/webp") 1x, url("../../img/content/hero-960@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-960.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/hero-960@2x.webp") type("image/webp") 2x, url("../img/content/hero-960.webp") type("image/webp") 1x, url("../img/content/hero-960@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-960.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/hero-960@2x.webp") type("image/webp") 2x, url("../img/content/hero-960.webp") type("image/webp") 1x, url("../img/content/hero-960@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-960.jpg") type("image/jpg") 1x);
   }
 
   .hero__header {
@@ -1753,8 +1753,8 @@ button,
   .mission__content {
     min-height: 461px;
     padding: 85px 0 0;
-    background-image: -webkit-image-set(url("../../img/content/mission-960@2x.webp") type("image/webp") 2x, url("../../img/content/mission-960.webp") type("image/webp") 1x, url("../../img/content/mission-960@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-960.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/mission-960@2x.webp") type("image/webp") 2x, url("../../img/content/mission-960.webp") type("image/webp") 1x, url("../../img/content/mission-960@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-960.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/mission-960@2x.webp") type("image/webp") 2x, url("../img/content/mission-960.webp") type("image/webp") 1x, url("../img/content/mission-960@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-960.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/mission-960@2x.webp") type("image/webp") 2x, url("../img/content/mission-960.webp") type("image/webp") 1x, url("../img/content/mission-960@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-960.jpg") type("image/jpg") 1x);
   }
 
   .mission__title {
@@ -1922,7 +1922,7 @@ button,
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../../img/sprite/decor-ferment-secondary.svg");
+    background-image: url("../img/sprite/decor-ferment-secondary.svg");
     position: absolute;
     bottom: 179px;
     left: -117px;
@@ -1933,8 +1933,8 @@ button,
 
 @media (min-width: 1280px) {
   .hero {
-    background-image: -webkit-image-set(url("../../img/content/hero-1280@2x.webp") type("image/webp") 2x, url("../../img/content/hero-1280.webp") type("image/webp") 1x, url("../../img/content/hero-1280@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-1280.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/hero-1280@2x.webp") type("image/webp") 2x, url("../../img/content/hero-1280.webp") type("image/webp") 1x, url("../../img/content/hero-1280@2x.jpg") type("image/jpg") 2x, url("../../img/content/hero-1280.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/hero-1280@2x.webp") type("image/webp") 2x, url("../img/content/hero-1280.webp") type("image/webp") 1x, url("../img/content/hero-1280@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-1280.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/hero-1280@2x.webp") type("image/webp") 2x, url("../img/content/hero-1280.webp") type("image/webp") 1x, url("../img/content/hero-1280@2x.jpg") type("image/jpg") 2x, url("../img/content/hero-1280.jpg") type("image/jpg") 1x);
   }
 
   .hero__header {
@@ -1955,7 +1955,7 @@ button,
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../../img/sprite/decor-hero.svg");
+    background-image: url("../img/sprite/decor-hero.svg");
     position: absolute;
     bottom: -97px;
     right: -130px;
@@ -2017,8 +2017,8 @@ button,
   .mission__content {
     min-height: 437px;
     padding: 81px 0 0;
-    background-image: -webkit-image-set(url("../../img/content/mission-1280@2x.webp") type("image/webp") 2x, url("../../img/content/mission-1280.webp") type("image/webp") 1x, url("../../img/content/mission-1280@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-1280.jpg") type("image/jpg") 1x);
-    background-image: image-set(url("../../img/content/mission-1280@2x.webp") type("image/webp") 2x, url("../../img/content/mission-1280.webp") type("image/webp") 1x, url("../../img/content/mission-1280@2x.jpg") type("image/jpg") 2x, url("../../img/content/mission-1280.jpg") type("image/jpg") 1x);
+    background-image: -webkit-image-set(url("../img/content/mission-1280@2x.webp") type("image/webp") 2x, url("../img/content/mission-1280.webp") type("image/webp") 1x, url("../img/content/mission-1280@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-1280.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("../img/content/mission-1280@2x.webp") type("image/webp") 2x, url("../img/content/mission-1280.webp") type("image/webp") 1x, url("../img/content/mission-1280@2x.jpg") type("image/jpg") 2x, url("../img/content/mission-1280.jpg") type("image/jpg") 1x);
   }
 
   .mission__title {
