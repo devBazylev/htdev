@@ -122,7 +122,7 @@ mixin adv()
             .adv__subwrapper
               h3.adv__subtitle.is-active= `${data.subtitle}`
               p.adv__text= `${data.text}`
-              +btn().adv__toggler
-      +btn(aria-label="Переключите на предыдущий слайд").adv__btn.adv__btn--prev
-      +btn(aria-label="Переключите на следующий слайд").adv__btn.adv__btn--next
+              +btn(class="adv__toggler")
+      +btn(aria-label="Переключите на предыдущий слайд", class="adv__btn adv__btn--prev")
+      +btn(aria-label="Переключите на следующий слайд", class= "adv__btn adv__btn--next")
       .adv__pagination
