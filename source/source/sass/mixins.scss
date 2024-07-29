@@ -58,7 +58,7 @@
   #{$type}-repeat: no-repeat;
   #{$type}-position: center;
   #{$type}-size: contain;
-  #{$type}-image: url("../../img/sprite/#{$name}.svg");
+  #{$type}-image: url("../img/sprite/#{$name}.svg");
 
   @if $color {
     background-color: $color;
