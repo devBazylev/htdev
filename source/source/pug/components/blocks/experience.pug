@@ -10,7 +10,7 @@ mixin experience()
         p Мы всегда рады принять талантливых и целеустремленных людей в нашу дружную команду! Мы ценим каждого своего сотрудника и стремимся предоставить всем равные возможности&nbsp;в&nbsp;развитии <br>и&nbsp;совершенств.
       .experience__wrapper
         .experience__back
-        a.experience__video.experience__video--size(data-href="https://www.youtube.com/embed/4XJIQUE0Ims")
+        a.experience__video.experience__video--size(data-href="https://www.youtube.com/embed/4XJIQUE0Ims", aria-label="Проиграть видео с ютуба.")
           picture
             source(type="image/webp", media="(min-width: 1280px)", srcset="img/content/exp-1280.webp 1x, img/content/exp-1280@2x.webp 2x", width="545", height="364")
             source(type="image/webp", media="(min-width: 960px)", srcset="img/content/exp-960.webp 1x, img/content/exp-960.webp 2x", width="405", height="271")
@@ -19,6 +19,6 @@ mixin experience()
             source(type="image/webp", media="(min-width: 1280px)", srcset="img/content/exp-1280.jpg 1x, img/content/exp-1280@2x.jpg 2x", width="545", height="364")
             source(type="image/webp", media="(min-width: 960px)", srcset="img/content/exp-960.jpg 1x, img/content/exp-960@2x.jpg 2x", width="405", height="271")
             source(type="image/webp", media="(min-width: 640px)", srcset="img/content/exp-640.jpg 1x, img/content/exp-640@2x.jpg 2x", width="540", height="361")
-            img(src="img/content/exp-320.jpg 1x", srcset="img/content/exp-320@2x.jpg 2x", width="260", height="174", alt="Видео с ютуба.", loading="lazy", class="experience__img")
-          +btn(aria-label="Проиграть видео с ютуба.", class="experience__btn")
+            img(src="img/content/exp-320.jpg", srcset="img/content/exp-320@2x.jpg 2x", width="260", height="174", alt="Видео с ютуба.", loading="lazy", class="experience__img")
+          .experience__btn
             +icon("play", 32, 21).experience__play
