@@ -630,6 +630,7 @@ button,
   min-height: 352px;
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
   background-color: rgba(138, 123, 96, 0.67);
   background-size: cover;
   background-position: bottom;
@@ -1899,6 +1900,13 @@ button,
 
   .ferment__slide:nth-of-type(6n + 6) svg {
     margin: 0 0 9px 78px;
+  }
+
+  .ferment__picture img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 240px;
   }
 
   .ferment__btn {
