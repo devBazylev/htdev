@@ -236,6 +236,16 @@
     }
   }
 
+  &__picture {
+    @include vp960 {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 240px;
+      }
+    }
+  }
+
   &__subtitle {
     margin: 0;
     padding: 16px 9px 0;
