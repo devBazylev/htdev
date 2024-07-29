@@ -87,7 +87,7 @@ mixin ferment()
                   +picture-extended(data.path, data.name, data.format, data.width_mob, data.height_mob, data.width_tab, data.height_tab, data.width_desk, data.height_desk, data.alt)
                 h3.ferment__subtitle= `${data.subtitle}`
               else
-                +icon(data.svg, data.width_svg, data.height_svg)(aria-label= `${data.svg}`).ferment__svg
+                +icon(data.svg, data.width_svg, data.height_svg)(aria-label= `${data.svg}`, class= "ferment__svg")
                 h3.ferment__subtitle= `${data.subtitle}`
           else
             .ferment__slide.swiper-slide
@@ -95,6 +95,6 @@ mixin ferment()
                 .ferment__picture
                   +picture-extended(data.path, data.name, data.format, data.width_mob, data.height_mob, data.width_tab, data.height_tab, data.width_desk, data.height_desk, data.alt)
                 h3.ferment__subtitle= `${data.subtitle}`
-      +btn(aria-label="Переключите на предыдущий слайд").ferment__btn.ferment__btn--prev
-      +btn(aria-label="Переключите на следующий слайд").ferment__btn.ferment__btn--next
+      +btn(aria-label="Переключите на предыдущий слайд", class="ferment__btn ferment__btn--prev")
+      +btn(aria-label="Переключите на следующий слайд", class="ferment__btn ferment__btn--next")
       .ferment__pagination
