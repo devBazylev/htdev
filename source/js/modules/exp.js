@@ -18,7 +18,6 @@ const replacePicture = () => {
   createIframe();
   video.innerHTML = '';
   video.appendChild(iframe);
-  // video.classList.remove('experience__video--size');
 };
 
 video.addEventListener('click', (evt) => {

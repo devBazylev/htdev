@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
-import {addClass, addListener, mob, tab, removeClass, toggleClass, setDataId} from '../utils/util.js';
+import {addClass, addListener, mob, tab, removeClass, removeListener, toggleClass, setDataId} from '../utils/util.js';
 
 const adv = document.querySelector('.adv');
 const slides = adv.querySelectorAll('.adv__slide');
@@ -12,30 +12,6 @@ const paragraphs = adv.querySelectorAll('.adv__text');
 
 const ACTIVE_BULLET_RANGE = 5;
 const PAGINATION_WIDTH = '64px';
-let screenWidth;
-let swiperWidth;
-
-const outerPadding = {
-  mob: 15,
-  tab: 15,
-};
-
-const innerPadding = {
-  mob: 15,
-  tab: 20,
-};
-
-const calcSwiperWidth = () => {
-  screenWidth = window.innerWidth;
-  if (mob.matches) {
-    swiperWidth = Math.round(screenWidth - outerPadding.mob * 2 - innerPadding.mob * 2);
-  }
-  if (tab.matches) {
-    swiperWidth = Math.round(screenWidth - outerPadding.tab * 2 - innerPadding.tab * 2);
-  }
-};
-
-calcSwiperWidth();
 
 const onTogglers = () => {
   for (let i = 0; i < slides.length; i++) {
@@ -83,11 +59,9 @@ const swiper = new Swiper('.adv__container', {
   },
   breakpoints: {
     320: {
-      width: swiperWidth,
       spaceBetween: 15,
     },
     640: {
-      width: swiperWidth,
       spaceBetween: 25,
     },
     960: {
@@ -96,23 +70,10 @@ const swiper = new Swiper('.adv__container', {
     },
   },
   on: {
-    breakpoint: function () {
-      if (mob.matches || tab.matches) {
-        this.enable();
-        calcSwiperWidth();
-        this.update();
-      } else {
-        this.disable();
-        setTimeout(() => {
-          sliderWrapper.style.transform = 'translate3d(0px, 0px, 0px)';
-        }, 300);
-      }
-    },
     resize: function () {
       if (mob.matches || tab.matches) {
         this.enable();
-        calcSwiperWidth();
-        this.update();
+        renderPagination();
       } else {
         this.disable();
         setTimeout(() => {
@@ -128,31 +89,44 @@ const renderPagination = () => {
   const bullets = pagination.querySelectorAll('.adv__bullet');
   setDataId(bullets);
   const activeBullet = pagination.querySelector('.adv__bullet--active');
-  const activeBulletId = +activeBullet.getAttribute('data-id');
-  if (activeBulletId >= ACTIVE_BULLET_RANGE && activeBulletId < bullets.length - 1) {
-    const indexBeforeActive = activeBulletId - ACTIVE_BULLET_RANGE;
-    const indexAfterActive = activeBulletId + 1;
-    bullets[indexBeforeActive].classList.remove('adv__bullet--active-main');
-    bullets[indexAfterActive].classList.add('adv__bullet--active-main');
-  }
-  if (!activeBulletId < 1 && activeBulletId < bullets.length - ACTIVE_BULLET_RANGE) {
-    const indexBeforeActive = activeBulletId - 1;
-    const indexAfterActive = activeBulletId + ACTIVE_BULLET_RANGE;
-    bullets[indexBeforeActive].classList.add('adv__bullet--active-main');
-    bullets[indexAfterActive].classList.remove('adv__bullet--active-main');
-  }
-  if (mob.matches || tab.matches) {
-    pagination.style.width = PAGINATION_WIDTH;
+  let activeBulletId;
+  // try/catch исправляет баг когда слайдер не зациклен, стоит на последнем слайде и при ресайзе количество полностью видимых слайдов изменяется, а вместе с этим изменяется количество буллетов
+  try {
+    activeBulletId = +activeBullet.getAttribute('data-id');
+    if (activeBulletId >= ACTIVE_BULLET_RANGE && activeBulletId < bullets.length - 1) {
+      const indexBeforeActive = activeBulletId - ACTIVE_BULLET_RANGE;
+      const indexAfterActive = activeBulletId + 1;
+      bullets[indexBeforeActive].classList.remove('adv__bullet--active-main');
+      bullets[indexAfterActive].classList.add('adv__bullet--active-main');
+    }
+    if (!activeBulletId < 1 && activeBulletId < bullets.length - ACTIVE_BULLET_RANGE) {
+      const indexBeforeActive = activeBulletId - 1;
+      const indexAfterActive = activeBulletId + ACTIVE_BULLET_RANGE;
+      bullets[indexBeforeActive].classList.add('adv__bullet--active-main');
+      bullets[indexAfterActive].classList.remove('adv__bullet--active-main');
+    }
+    if (mob.matches || tab.matches) {
+      pagination.style.width = PAGINATION_WIDTH;
+    }
+  } catch (e) {
+    activeBulletId = bullets.length - 1;
   }
 };
 
-const swiperInit = () => {
+const onScreen = () => {
   if (mob.matches || tab.matches) {
     swiper.init();
     renderPagination();
+    swiper.on('paginationUpdate', renderPagination);
+    removeListener(window, 'resize', onScreen);
   }
+  onTogglers();
+  removeListener(window, 'load', onScreen);
 };
 
-swiperInit();
-onTogglers();
-swiper.on('paginationUpdate', renderPagination);
+const initSwiperAdv = () => {
+  addListener(window, 'load', onScreen);
+  addListener(window, 'resize', onScreen);
+};
+
+export {initSwiperAdv};
