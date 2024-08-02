@@ -1,4 +1,4 @@
-const desk = window.matchMedia('(min-width: 1024px)');
+const desk = window.matchMedia('(min-width: 960px)');
 const mob = window.matchMedia('(min-width: 0px) and (max-width: 639px)');
 const tab = window.matchMedia('(min-width: 640px) and (max-width: 959px)');
 
