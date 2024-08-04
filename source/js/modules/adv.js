@@ -40,6 +40,7 @@ const swiper = new Swiper('.adv__container', {
   slidesPerView: 'auto',
   resizeObserver: true,
   updateOnWindowResize: true,
+  slideFullyVisibleClass: 'adv__slide--full',
   navigation: {
     prevEl: '.adv__btn--prev',
     nextEl: '.adv__btn--next',

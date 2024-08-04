@@ -177,6 +177,7 @@
     width: 29px;
     height: 29px;
     padding: 0;
+    visibility: hidden;
     transition: all $trans-default;
 
     @include vp960 {
@@ -208,6 +209,10 @@
       left: -8px;
       transform: rotate(90deg);
     }
+  }
+
+  &__slide--full .adv__toggler{
+    visibility: visible;
   }
 
   &__toggler.is-active {
